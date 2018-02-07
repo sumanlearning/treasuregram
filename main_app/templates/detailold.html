@@ -1,0 +1,53 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset="utf-8">
+	<title>{{ treasure.name }}</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.css" %}">
+	<link rel="stylesheet" type="text/css" href="{% static "main.css" %}">
+</head>
+<body>
+	<main>
+		<div class="treasure panel panel-danger text-center">
+			<div class="panel panel-heading">
+				<h2 class="panel-title">{{ treasure.name }}</h2>
+			</div>
+
+			<table class="table table-striped">
+				<tr>
+					<td><img src="{{ treasure.img_url }}" height="200"></td>				
+				</tr>
+				<tr>
+					<td><i class="tambah glyphicon glyphicon-usd"></i> Value : {{ treasure.value }}</td>
+				</tr>
+				<tr>
+					<td><i class="tambah glyphicon glyphicon-map-marker"></i> lokasi : {{ treasure.location }} </td>
+				</tr>
+			</table>
+
+		</div>
+
+
+		
+<!--
+						<div class="panel-body">
+					<img src="{{ treasure.img_url }}">
+					<table class="table">
+						<tr>
+							<p>Nilai : {{ treasure.value }}</p>
+						</tr>	
+						<tr>
+							<p>Location : {{ treasure.location }}</p>
+						</tr>					
+					</table>
+				</div>			
+	-->	
+
+
+	</main>
+
+	<script type="text/javascript" src='{% static "jquery-3.3.1.min.js" %}'></script>
+</body>
+</html>
